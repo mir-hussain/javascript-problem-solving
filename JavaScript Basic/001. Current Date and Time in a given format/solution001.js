@@ -5,8 +5,16 @@ const day = today.toLocaleDateString("default", {
 });
 
 const time = today.getHours();
-const dayTime = time > 12 ? "PM" : "AM";
-const hour = time > 12 ? time - 12 : time;
+const dayTime = time < 12 ? "AM" : "PM";
+
+let hour;
+
+if (time === 0) {
+  hour = 12;
+} else {
+  hour = time > 12 ? time - 12 : time;
+}
+
 const min = today.getMinutes();
 const sec = today.getSeconds();
 
