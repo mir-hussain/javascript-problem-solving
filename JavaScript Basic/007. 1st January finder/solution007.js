@@ -7,4 +7,4 @@ const sundayFinder = (start, end) => {
   }
 };
 
-sundayFinder(2020, 2120);
+sundayFinder(2020, 2050);
