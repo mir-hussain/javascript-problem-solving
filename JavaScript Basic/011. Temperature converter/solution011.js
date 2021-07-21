@@ -4,13 +4,13 @@ const tempConverter = (temp) => {
 
   if (scale === "c") {
     const result = (number / 5) * 9 + 32;
-    return `  ${result.toFixed(2)} F`;
+    return `${number}° C is ${result.toFixed(2)}° F`;
   } else {
     const result = ((number - 32) / 9) * 5;
-    return `${result.toFixed(2)};`;
+    return `${number}° F is ${result.toFixed(2)}° C;`;
   }
 };
 
-const temperature = tempConverter("45F");
+const temperature = tempConverter("60C");
 
 console.log(temperature);
